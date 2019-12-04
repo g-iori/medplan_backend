@@ -1,15 +1,27 @@
 package com.ifsp.medplan.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.android.volley.AuthFailureError;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.Request;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+
 
 import com.ifsp.medplan.R;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LoginActivity extends AppCompatActivity {
     EditText login_email, login_senha;
+    Button btn_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,4 +41,6 @@ public class LoginActivity extends AppCompatActivity {
         Intent i = new Intent(LoginActivity.this, CadastroActivity.class);
         startActivity(i);
     }
+
+
 }
