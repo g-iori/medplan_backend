@@ -18,6 +18,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLEncoder;
 
+import static java.lang.Integer.lowestOneBit;
 import static java.lang.Integer.parseInt;
 
 /**
@@ -34,6 +35,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String type = params[0];
         String login_url = "http://192.168.0.26/login.php";
         String register_url = "http://192.168.0.26/register.php";
+        //Login
         if(type.equals("login")) {
             try {
                 String email = params[1];
@@ -67,7 +69,9 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        } else if(type.equals("register")){
+        }
+        //Cadastro de novo usuário
+        else if(type.equals("register")){
                 try {
                     String nome = params[1];
                     String email = params[2];
@@ -109,19 +113,17 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     @Override
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Login Status");
+        alertDialog.setTitle("Aviso!");
     }
-
+    //Verificando login
    @Override
     protected void onPostExecute(String result){
-        int veriflogin = parseInt(result);
-        if(veriflogin == 1){
+        if(result.equals("OK")){
                 Intent i = new Intent(context, HomeActivity.class);
                 context.startActivity(i);
-
-            }
+        }
         else{
-            alertDialog.setMessage("Login incorreto!");
+            alertDialog.setMessage(result);
             alertDialog.show();
         }
     }
