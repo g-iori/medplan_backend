@@ -63,7 +63,7 @@ public class FragmentLembrete extends Fragment {
                                 String dose_lemb = lembreteObject.getString("dose_lemb");
                                 String tipo_medicamento = lembreteObject.getString("tipo_medicamento");
                                 String adm_lemb = lembreteObject.getString("adm_lemb");
-                                lstLembretes.add(new Lembretes(nome_medicamento, dose_lemb, tipo_medicamento, adm_lemb));
+                                lstLembretes.add(new Lembretes(nome_medicamento, dose_lemb, tipo_medicamento, adm_lemb+" em "+adm_lemb+" horas"));
                             }
                             myrecyclerview = (RecyclerView) v.findViewById(R.id.lembrete_rv);
                             RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), lstLembretes);
