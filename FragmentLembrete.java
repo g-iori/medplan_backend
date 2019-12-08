@@ -1,7 +1,6 @@
 package com.ifsp.medplan.activity;
 
 import android.os.Bundle;
-import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -50,7 +49,7 @@ public class FragmentLembrete extends Fragment {
 
         return v;
     }
-    private void loadLembretes() {
+    public void loadLembretes() {
         StringRequest stringRequest = new StringRequest(Request.Method.GET, LEMBRETE_URL,
                 new Response.Listener<String>() {
                     @Override
@@ -83,5 +82,6 @@ public class FragmentLembrete extends Fragment {
                 });
         Volley.newRequestQueue(getActivity()).add(stringRequest);
     }
+
 
 }
