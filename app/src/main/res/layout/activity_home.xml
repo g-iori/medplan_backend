@@ -46,7 +46,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/tipo_med"
+                android:id="@+id/usuarioPerfil"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:src="@drawable/personicon"
@@ -57,7 +57,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
-                android:id="@+id/home_navmenuBtn"
+                android:id="@+id/homeNavBtn"
                 style="@style/Widget.AppCompat.Button.Borderless"
                 android:layout_width="50dp"
                 android:layout_height="50dp"

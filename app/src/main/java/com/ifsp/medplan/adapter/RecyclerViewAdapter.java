@@ -53,11 +53,12 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView dosagem_med;
         private TextView horario_med;
         private TextView adm_med;
+        private ImageView img_tipo;
         //private ImageView img_tipo;
         public MyViewHolder (View itemView){
             super(itemView);
 
-            //img_tipo = itemView.findViewById(R.id.tipo_med);
+            img_tipo = itemView.findViewById(R.id.tipo_med);
             nome_med = itemView.findViewById(R.id.nome_med);
             dosagem_med = itemView.findViewById(R.id.dosagem_med);
             horario_med = itemView.findViewById(R.id.tipo_med);
