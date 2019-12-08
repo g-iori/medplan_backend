@@ -60,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             //img_tipo = itemView.findViewById(R.id.tipo_med);
             nome_med = itemView.findViewById(R.id.nome_med);
             dosagem_med = itemView.findViewById(R.id.dosagem_med);
-            horario_med = itemView.findViewById(R.id.horario_med);
+            horario_med = itemView.findViewById(R.id.tipo_med);
             adm_med = itemView.findViewById(R.id.adm_med);
         }
     }
