@@ -39,7 +39,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.nome_med.setText(mData.get(position).getNome_med());
         holder.dosagem_med.setText(mData.get(position).getDosagem_med());
         holder.horario_med.setText(mData.get(position).getHorario_med());
-        holder.img_tipo.setImageResource(mData.get(position).getTipo_med());
+        holder.adm_med.setText(mData.get(position).getAdm_med());
+        //holder.img_tipo.setImageResource(mData.get(position).getTipo_med());
     }
 
     @Override
@@ -51,14 +52,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         private TextView nome_med;
         private TextView dosagem_med;
         private TextView horario_med;
-        private ImageView img_tipo;
+        private TextView adm_med;
+        //private ImageView img_tipo;
         public MyViewHolder (View itemView){
             super(itemView);
 
-            img_tipo = itemView.findViewById(R.id.tipo_med);
+            //img_tipo = itemView.findViewById(R.id.tipo_med);
             nome_med = itemView.findViewById(R.id.nome_med);
             dosagem_med = itemView.findViewById(R.id.dosagem_med);
             horario_med = itemView.findViewById(R.id.horario_med);
+            adm_med = itemView.findViewById(R.id.adm_med);
         }
     }
 }

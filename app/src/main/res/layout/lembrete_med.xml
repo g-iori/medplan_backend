@@ -5,8 +5,8 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:src="@mipmap/ic_launcher_round"
         android:id="@+id/tipo_med"/>
     <LinearLayout
@@ -30,6 +30,11 @@
             android:layout_height="wrap_content"
             android:text="horario"
             android:id="@+id/horario_med"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administração med"
+            android:id="@+id/adm_med"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
