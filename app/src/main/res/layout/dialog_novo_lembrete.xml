@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mask="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/rl_Medicamento">
+
+        <TextView
+            android:id="@+id/textMedicamentoNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qual medicamento precisa?"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/PillLightBlue"
+            android:textSize="20sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <Spinner
+            android:id="@+id/spinnerMedicamento"
+            android:layout_width="340dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dropdown"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:paddingStart="50dp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="50dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="16dp"/>
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_Dosagem"
+        android:layout_below="@id/rl_Medicamento">
+
+        <TextView
+            android:id="@+id/textDosagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qual a dose indicada ou receitada?"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/PillLightBlue"
+            android:textSize="18sp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:hint="0000"
+            android:gravity="center"
+            android:fontFamily="@font/semibold"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="20dp"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:id="@+id/spinnerTipoMed"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dropdown"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_Intervalo"
+        android:layout_below="@id/rl_Dosagem">
+
+        <TextView
+            android:id="@+id/textIntervalo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Durante quanto tempo iremos lhe lembrar?"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/PillLightBlue"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Selecione um intervalo:"
+            android:fontFamily="@font/semibold"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="12dp"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:id="@+id/spinnerIntervalo"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dropdown"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_Adm"
+        android:layout_below="@id/rl_Intervalo">
+
+        <TextView
+            android:id="@+id/textAdm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qual o intervalo de administração?"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/PillLightBlue"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="A cada:"
+            android:fontFamily="@font/semibold"
+            android:textSize="16sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="15dp"
+            android:paddingLeft="12dp"
+            android:layout_alignParentLeft="true" />
+
+        <Spinner
+            android:id="@+id/spinnerTempo"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_centerHorizontal="true"
+            android:spinnerMode="dropdown"
+            android:ellipsize="start"
+            android:gravity="center_vertical"
+            android:paddingLeft="50dp"
+            android:textAllCaps="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        <Spinner
+            android:id="@+id/spinnerNumeroTempo"
+            android:layout_width="85dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:spinnerMode="dropdown"
+            android:ellipsize="start"
+            android:textAllCaps="true"
+            android:layout_marginLeft="80dp"
+            android:layout_alignParentBottom="true" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="95dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/rl_Inicio"
+        android:layout_below="@id/rl_Adm">
+
+        <TextView
+            android:id="@+id/textInicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quando devemos começar a te lembrar?"
+            android:fontFamily="@font/regular"
+            android:textColor="@color/PillLightBlue"
+            android:textSize="18sp"
+            android:maxLines="1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:text="Selecione uma data e um horário"
+            android:fontFamily="@font/semibold"
+            android:textSize="14sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="45dp"
+            android:paddingLeft="12dp"
+            android:layout_alignParentLeft="true" />
+
+    </RelativeLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnAceitar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="80dp"
+        android:layout_marginBottom="70dp"
+        android:layout_marginLeft="80dp" />
+
+
+</RelativeLayout>

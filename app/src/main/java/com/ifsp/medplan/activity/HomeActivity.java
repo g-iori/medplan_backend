@@ -44,8 +44,8 @@ public class HomeActivity extends AppCompatActivity {
         adapter.AddFragment(new FragmentCesta(), "Cesta");
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
-
     }
+
 
 
 }
