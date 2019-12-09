@@ -43,4 +43,6 @@ dependencies {
     /*CircleImageView*/
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     //annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
+    /*EditText com Mascara*/
+    implementation 'ru.egslava:MaskedEditText:1.0.5'
 }
