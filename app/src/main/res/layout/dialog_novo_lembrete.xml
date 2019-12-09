@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:mask="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/dialog_bg">
 
 
     <RelativeLayout
@@ -35,13 +36,12 @@
             android:paddingStart="50dp"
             android:textAllCaps="true"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:paddingLeft="50dp" />
+            android:layout_alignParentStart="true"/>
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:src="@drawable/search_symbol"
             android:layout_alignParentLeft="true"
             android:layout_marginTop="50dp"
             android:layout_marginLeft="16dp"/>
@@ -77,8 +77,7 @@
             android:textSize="18sp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="5dp"
-            android:layout_marginLeft="20dp"
-            android:layout_alignParentLeft="true" />
+            android:layout_marginLeft="20dp"/>
 
         <Spinner
             android:id="@+id/spinnerTipoMed"
@@ -126,8 +125,7 @@
             android:textSize="15sp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="20dp"
-            android:paddingLeft="12dp"
-            android:layout_alignParentLeft="true" />
+            android:paddingLeft="12dp"/>
 
         <Spinner
             android:id="@+id/spinnerIntervalo"
@@ -174,8 +172,7 @@
             android:textSize="16sp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="15dp"
-            android:paddingLeft="12dp"
-            android:layout_alignParentLeft="true" />
+            android:paddingLeft="12dp"/>
 
         <Spinner
             android:id="@+id/spinnerTempo"
@@ -232,9 +229,35 @@
             android:textSize="14sp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="45dp"
-            android:paddingLeft="12dp"
-            android:layout_alignParentLeft="true" />
+            android:paddingLeft="12dp"/>
 
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/horasPicker"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:inputType="time"
+            android:typeface="monospace"
+            mask:allowed_chars="1234567890"
+            mask:mask="##:##"
+            android:hint="1200"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"/>
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:id="@+id/dataPicker"
+            android:layout_width="200dp"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/regular"
+            android:inputType="date"
+            android:typeface="monospace"
+            mask:allowed_chars="1234567890"
+            mask:mask="##/##/####"
+            android:hint="DDMMAAAA"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"/>
     </RelativeLayout>
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -243,9 +266,20 @@
         android:id="@+id/btnAceitar"
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_marginStart="80dp"
         android:layout_marginBottom="70dp"
-        android:layout_marginLeft="80dp" />
+        android:src="@drawable/buttonyes" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:id="@+id/btnCancelar"
+        android:src="@drawable/buttoncancel"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="70dp"/>
 
 </RelativeLayout>

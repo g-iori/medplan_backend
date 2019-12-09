@@ -48,7 +48,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         vHolder.item_lembrete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Test Click"+String.valueOf(vHolder.getAdapterPosition()),Toast.LENGTH_SHORT).show();
                 myDialog.show();
             }
         });
@@ -61,7 +60,6 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.dosagem_med.setText(mData.get(position).getDosagem_med());
         holder.horario_med.setText(mData.get(position).getHorario_med());
         holder.adm_med.setText(mData.get(position).getAdm_med());
-        //holder.img_tipo.setImageResource(mData.get(position).getTipo_med());
 
     }
 

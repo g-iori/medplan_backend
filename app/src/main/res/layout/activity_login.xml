@@ -2,76 +2,212 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
     tools:context=".activity.LoginActivity">
 
-    <Button
-        android:id="@+id/btn_login"
-        android:layout_width="363dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
-        android:text="Entrar"
-        android:onClick="OnLogin"
-        app:layout_constraintBottom_toTopOf="@+id/btn_novo_cadastro"
+    <ImageView
+        android:id="@+id/headerbg"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/PillBlue"
+        android:scaleType="center"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_senha" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/txt_nome_app"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Medplan"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/login_email"
+    <EditText
+        android:id="@+id/login_email"
+        android:layout_width="320dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="320dp"
+        android:background="@drawable/button_white"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Insira o seu email"
+        android:inputType="textEmailAddress"
+        android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/login_senha"
-        android:layout_width="363dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:ems="10"
-        android:hint="Senha"
+        android:layout_width="320dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/button_white"
+        android:ellipsize="start"
+        android:gravity="center"
+        android:hint="Insira sua senha"
+        android:imeOptions="actionDone"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        android:selectAllOnFocus="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/login_email" />
 
-    <Button
-        android:id="@+id/btn_novo_cadastro"
-        android:layout_width="363dp"
+    <TextView
+        android:id="@+id/senhaTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:text="Cadastre-se"
-        android:onClick="abrirCadastro"
+        android:fontFamily="@font/regular"
+        android:text="senha"
+        android:textColor="@color/PillBlue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_senha"
+        app:layout_constraintEnd_toEndOf="@+id/login_senha"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_senha"
+        app:layout_constraintTop_toBottomOf="@+id/login_email"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/emailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/login_email"
+        app:layout_constraintEnd_toEndOf="@+id/login_email"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="@+id/login_email"
+        app:layout_constraintTop_toTopOf="@+id/login_email"
+        app:layout_constraintVertical_bias="0.526"
+        app:srcCompat="@drawable/emailicon" />
+
+    <ImageView
+        android:id="@+id/passwordIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/login_senha"
+        app:layout_constraintEnd_toEndOf="@+id/login_senha"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="@+id/login_senha"
+        app:layout_constraintTop_toTopOf="@+id/login_senha"
+        app:layout_constraintVertical_bias="0.558"
+        app:srcCompat="@drawable/lockicon" />
+
+    <TextView
+        android:id="@+id/emailTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="e-mail"
+        android:textColor="@color/PillBlue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_email"
+        app:layout_constraintEnd_toEndOf="@+id/login_email"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/login_email"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/headerText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/regular"
+        android:text="Acesse sua conta!"
+        android:textColor="@color/PillBlue"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerbg"
+        app:layout_constraintVertical_bias="0.206" />
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="281dp"
+        android:layout_height="95dp"
+        android:layout_margin="24dp"
+        android:fontFamily="@font/bold"
+        android:text="Medplan"
+        android:textColor="@color/White"
+        android:textSize="70sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
 
-    <EditText
-        android:id="@+id/login_email"
-        android:layout_width="363dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="124dp"
-        android:ems="10"
-        android:hint="E-mail"
-        android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/login_senha"
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/bold"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:text="ENTRAR"
+        android:onClick="OnLogin"
+        android:textAllCaps="true"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/login_recuperaSenha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txt_nome_app" />
+        app:layout_constraintTop_toBottomOf="@+id/login_senha" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <ProgressBar
+        android:id="@+id/loading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="-75dp" />
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="64dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/login_senha"
+        app:layout_constraintStart_toStartOf="@+id/login_senha"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.3" />
+
+    <Button
+        android:id="@+id/login_recuperaSenha"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="320dp"
+        android:layout_height="0dp"
+        android:background="@null"
+        android:fontFamily="@font/regular"
+        android:text="Esqueci a minha senha"
+        android:textColor="@color/PillBlue"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/backwardsbtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        android:onClick="goToMainActivity"
+        app:layout_constraintBottom_toTopOf="@+id/appTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/backwardarrow"
+        android:contentDescription="TODO" />
+
+    <ImageButton
+        android:id="@+id/helpbtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="45dp"
+        android:layout_height="49dp"
+        app:layout_constraintBottom_toTopOf="@+id/appTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/help" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

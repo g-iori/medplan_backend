@@ -6,63 +6,165 @@
     android:layout_height="match_parent"
     tools:context=".activity.CadastroActivity">
 
+    <ImageView
+        android:id="@+id/headerbgSignup"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:background="@color/PillBlue"
+        android:contentDescription="TODO"
+        android:scaleType="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageButton
+        android:id="@+id/backwardBtn"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="16dp"
+        android:onClick=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/backwardarrow" />
+
+    <TextView
+        android:id="@+id/appTitleSignUp"
+        android:layout_width="281dp"
+        android:layout_height="95dp"
+        android:fontFamily="@font/bold"
+        android:text="Medplan"
+        android:textColor="@color/White"
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.066" />
+
     <EditText
         android:id="@+id/cadastro_nome"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
+        android:layout_width="340dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/PillLightBlue"
         android:ems="10"
-        android:hint="Nome"
+        android:fontFamily="@font/light"
+        android:hint="Seu nome completo"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/cadastro_email"
+        android:paddingLeft="40dp"
+        android:textColorHint="@color/PillLightBlue"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/header_medplan" />
 
+    <ImageView
+        android:id="@+id/nameIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/cadastro_nome"
+        app:layout_constraintEnd_toEndOf="@+id/cadastro_nome"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_nome"
+        app:layout_constraintTop_toTopOf="@+id/cadastro_nome"
+        app:srcCompat="@drawable/personicon"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="293dp" />
+
     <EditText
         android:id="@+id/cadastro_email"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/PillLightBlue"
         android:ems="10"
-        android:hint="Email"
+        android:fontFamily="@font/light"
+        android:hint="seuemail@mail.com"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/cadastro_senha"
+        android:paddingLeft="40dp"
+        android:textColorHint="@color/PillLightBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cadastro_nome" />
 
+    <ImageView
+        android:id="@+id/mailIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/cadastro_email"
+        app:layout_constraintEnd_toEndOf="@+id/cadastro_email"
+        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_email"
+        app:layout_constraintTop_toTopOf="@+id/cadastro_email"
+        app:layout_constraintVertical_bias="0.552"
+        app:srcCompat="@drawable/emailicon" />
+
     <EditText
         android:id="@+id/cadastro_senha"
-        android:layout_width="411dp"
-        android:layout_height="wrap_content"
+        android:layout_width="340dp"
+        android:layout_height="50sp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/PillLightBlue"
         android:ems="10"
-        android:hint="Senha"
+        android:fontFamily="@font/light"
+        android:hint="Sua senha"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/btn_cadastro"
+        android:paddingLeft="40dp"
+        android:textColorHint="@color/PillLightBlue"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cadastro_email" />
 
-    <Button
-        android:id="@+id/btn_cadastro"
+    <ImageView
+        android:id="@+id/senhaIcon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastrar"
-        android:onClick="OnReg"
+        app:layout_constraintBottom_toBottomOf="@+id/cadastro_senha"
+        app:layout_constraintEnd_toEndOf="@+id/cadastro_senha"
+        app:layout_constraintHorizontal_bias="0.027"
+        app:layout_constraintStart_toStartOf="@+id/cadastro_senha"
+        app:layout_constraintTop_toTopOf="@+id/cadastro_senha"
+        app:srcCompat="@drawable/lockicon" />
+
+    <Button
+        android:id="@+id/btn_cadastro"
+        android:layout_width="320dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_square"
+        android:enabled="false"
+        android:fontFamily="@font/bold"
+        android:text="ENVIAR"
+        android:textAllCaps="true"
+        android:textColor="@color/White"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cadastro_senha" />
+        app:layout_constraintTop_toBottomOf="@+id/cadastro_senha"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/header_medplan"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cadastre-se"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/cadastro_nome"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/bold"
+        android:text="Cadastre-se!"
+        android:textColor="@color/PillBlue"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/headerbgSignup" />
 </androidx.constraintlayout.widget.ConstraintLayout>

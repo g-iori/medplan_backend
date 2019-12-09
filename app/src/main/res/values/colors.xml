@@ -4,6 +4,8 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
     <color name="colorForeground">#000001</color>
+
+    /*Cores Projeto*/
     <color name="LightBlue">#BCE0FD</color>
     <color name="White">#FFFFFF</color>
     <color name="PillBlue">#6895B4</color>
