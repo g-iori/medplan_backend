@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:mask="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="410dp"
+    android:layout_height="730dp"
     android:background="@drawable/dialog_bg">
 
 
@@ -108,7 +108,7 @@
             android:id="@+id/textIntervalo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Durante quanto tempo iremos lhe lembrar?"
+            android:text="Quanto tempo esse lembrete irá durar?"
             android:fontFamily="@font/regular"
             android:textColor="@color/PillLightBlue"
             android:textSize="18sp"
@@ -120,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:text="Selecione um intervalo:"
+            android:text="Selecione uma duração:"
             android:fontFamily="@font/semibold"
             android:textSize="15sp"
             android:layout_alignParentBottom="true"
@@ -267,19 +267,30 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentBottom="true"
         android:foreground="?android:attr/selectableItemBackground"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="60dp"
         android:layout_marginBottom="70dp"
         android:src="@drawable/buttonyes" />
 
     <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnCancelar"
         android:layout_width="80dp"
         android:layout_height="80dp"
-        android:id="@+id/btnCancelar"
-        android:src="@drawable/buttoncancel"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginEnd="150dp"
+        android:layout_marginBottom="70dp"
         android:foreground="?android:attr/selectableItemBackground"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="70dp"/>
+        android:src="@drawable/buttoncancel" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/btnDeletar"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="75dp"
+        android:layout_marginEnd="60dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:src="@drawable/buttondelete" />
 
 </RelativeLayout>
