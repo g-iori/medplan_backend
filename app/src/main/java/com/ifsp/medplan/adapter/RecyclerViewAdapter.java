@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.volley.Response;
 import com.ifsp.medplan.R;
+import com.ifsp.medplan.activity.BackgroundWorker;
 import com.ifsp.medplan.activity.Lembretes;
 
 import java.util.ArrayList;
@@ -41,7 +42,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         MyViewHolder vHolder = new MyViewHolder(v);
 
         myDialog = new Dialog(mContext);
-        myDialog.setContentView(R.layout.dialog_novo_lembrete);
+        myDialog.setContentView(R.layout.dialog_editar_lembrete);
 
 
 
@@ -62,12 +63,16 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.adm_med.setText(mData.get(position).getAdm_med());
 
     }
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
 
     @Override
     public int getItemCount() {
-
         return mData.size();
     }
+
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
         private TextView nome_med;
@@ -85,7 +90,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             //img_tipo = itemView.findViewById(R.id.tipo_med);
             nome_med = itemView.findViewById(R.id.nome_med);
             dosagem_med = itemView.findViewById(R.id.dosagem_med);
-            horario_med = itemView.findViewById(R.id.tipo_med);
+            horario_med = itemView.findViewById(R.id.horario_med);
             adm_med = itemView.findViewById(R.id.adm_med);
             lembreteLayout = itemView.findViewById(R.id.lembrete_rv);
 

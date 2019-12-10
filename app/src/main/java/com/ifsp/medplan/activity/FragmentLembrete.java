@@ -48,7 +48,6 @@ public class FragmentLembrete extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = inflater.inflate(R.layout.lembrete_fragment, container, false);
-
         return v;
     }
     public void loadLembretes() {
@@ -68,6 +67,7 @@ public class FragmentLembrete extends Fragment {
                             }
                             myrecyclerview = (RecyclerView) v.findViewById(R.id.lembrete_rv);
                             RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), (ArrayList<Lembretes>) lstLembretes);
+                            recyclerViewAdapter.setHasStableIds(true);
                             myrecyclerview.setLayoutManager(new LinearLayoutManager(getActivity()));
                             myrecyclerview.setAdapter(recyclerViewAdapter);
                         } catch (JSONException e) {

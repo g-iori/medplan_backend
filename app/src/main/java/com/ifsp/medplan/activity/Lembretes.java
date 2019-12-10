@@ -5,6 +5,7 @@ public class Lembretes {
     private String dosagem_med;
     private String horario_med;
     private String adm_med;
+    private String getid;
     public int tipo_med;
 
     public Lembretes() {
@@ -17,6 +18,7 @@ public class Lembretes {
         this.adm_med = adm_med;
         //this.tipo_med = tipo_med;
     }
+
 
     public String getNome_med() {
         return nome_med;

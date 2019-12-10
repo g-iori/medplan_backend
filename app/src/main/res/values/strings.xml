@@ -8,13 +8,52 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
-    <string-array name="Medicamentos">
-        <item>Cappuccino</item>
-        <item>Espresso</item>
-        <item>Mocha</item>
-        <item>Caffè Americano</item>
-        <item>Cafe Zorro</item>
+    <string-array name="tipo_med">
+        <item>Cápsula(s)</item>
+        <item>Comprimido(s)</item>
+        <item>ML(s)</item>
     </string-array>
 
+    <string-array name="intervalos">
+        <item>Todos os dias</item>
+        <item>3 dias</item>
+        <item>5 dias</item>
+        <item>7 dias</item>
+        <item>10 dias</item>
+        <item>15 dias</item>
+        <item>20 dias</item>
+        <item>30 dias</item>
+    </string-array>
 
+    <string-array name="adm_numero">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+    </string-array>
+
+    <string-array name="adm_tipo">
+        <item>Hora(s)</item>
+        <item>Dia(s)</item>
+    </string-array>
 </resources>

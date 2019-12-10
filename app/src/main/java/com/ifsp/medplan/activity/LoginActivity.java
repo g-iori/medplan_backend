@@ -13,7 +13,6 @@ import com.ifsp.medplan.R;
 
 public class LoginActivity extends AppCompatActivity {
     EditText login_email, login_senha;
-    Button btn_login;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
         String email = login_email.getText().toString();
         String senha = login_senha.getText().toString();
         String type = "login";
+        String type_getid = "getid";
         BackgroundWorker backgroundWorker = new BackgroundWorker(this);
         backgroundWorker.execute(type, email, senha);
     }
