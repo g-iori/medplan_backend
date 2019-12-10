@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -66,9 +67,9 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     private void CriaDialogo(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         LayoutInflater layoutInflater=this.getLayoutInflater();
         View view = layoutInflater.inflate(R.layout.dialog_novo_lembrete, null);
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setView(view);
 
         Spinner tipoMed = (Spinner) view .findViewById(R.id.spinnerTipoMed);
@@ -96,7 +97,26 @@ public class HomeActivity extends AppCompatActivity {
         horaDia.setAdapter(adapter3);
 
         this.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        builder.create();
-        builder.show();
+
+        Button btn_positive = (Button) view.findViewById(R.id.btnAceitar);
+        Button btn_negative = (Button) view.findViewById(R.id.btnCancelar);
+
+        final AlertDialog dialog = builder.create();
+
+        btn_positive.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+
+            }
+        });
+
+        btn_negative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
     }
 }

@@ -106,31 +106,45 @@
             android:textAllCaps="true" />
     </RelativeLayout>
 
-    <de.hdodenhof.circleimageview.CircleImageView
+
+    <Button
+        android:id="@+id/btnAceitar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/button_square"
+        android:fontFamily="@font/bold"
+        android:padding="15dp"
+        android:text="OK"
+        android:textColor="@color/White"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
+        app:layout_constraintHorizontal_bias="0.644"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_Dosagem"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
         android:id="@+id/btnCancelar"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
         android:layout_marginBottom="8dp"
+        android:text="CANCELAR"
+        android:textColor="@color/PillBlue"
+        android:fontFamily="@font/bold"
+        android:textSize="20sp"
+        android:padding="15dp"
         android:foreground="?android:attr/selectableItemBackground"
-        android:src="@drawable/buttoncancel"
+        android:background="@drawable/button_square_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/rl_Dosagem"
         app:layout_constraintVertical_bias="0.0" />
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/btnAceitar"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginBottom="8dp"
-        android:foreground="?android:attr/selectableItemBackground"
-        android:src="@drawable/buttonyes"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCancelar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/rl_Dosagem" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
