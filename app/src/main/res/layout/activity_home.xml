@@ -24,6 +24,7 @@
             android:backgroundTint="@color/PillLightBlue"
             android:clickable="true"
             android:elevation="6dp"
+            app:borderWidth="0dp"
             android:src="@drawable/new_stock"
             app:fabCustomSize="@dimen/fab_Big"
             app:fabSize="normal" />
@@ -35,11 +36,11 @@
             android:layout_height="80dp">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/textUsername"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/bold"
-                android:text="Nome Tab Ativa"
+                android:text="Maria das Grassa"
                 android:textColor="@color/PillBlue"
                 android:textSize="30sp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -51,11 +52,11 @@
                 android:id="@+id/usuarioPerfil"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/personicon"
+                android:src="@drawable/userpropic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.824"
-                app:layout_constraintStart_toEndOf="@+id/textView"
+                app:layout_constraintHorizontal_bias="0.609"
+                app:layout_constraintStart_toEndOf="@+id/textUsername"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageButton
@@ -64,7 +65,7 @@
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/textView"
+                app:layout_constraintEnd_toStartOf="@+id/textUsername"
                 app:layout_constraintHorizontal_bias="0.2"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"

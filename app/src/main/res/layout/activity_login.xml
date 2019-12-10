@@ -21,23 +21,24 @@
     <EditText
         android:id="@+id/login_email"
         android:layout_width="320dp"
-        android:layout_height="50sp"
-        android:layout_marginTop="320dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/button_white"
         android:ellipsize="start"
         android:gravity="center"
         android:hint="Insira o seu email"
         android:inputType="textEmailAddress"
         android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/login_senha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/login_senha"
         android:layout_width="320dp"
-        android:layout_height="50sp"
-        android:layout_marginTop="70dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="52dp"
         android:background="@drawable/button_white"
         android:ellipsize="start"
         android:gravity="center"
@@ -45,9 +46,9 @@
         android:imeOptions="actionDone"
         android:inputType="textPassword"
         android:selectAllOnFocus="true"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_email" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/senhaTitle"
@@ -100,13 +101,14 @@
         app:layout_constraintEnd_toEndOf="@+id/login_email"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/login_email"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerText"
         app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/headerText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
         android:fontFamily="@font/regular"
         android:text="Acesse sua conta!"
         android:textColor="@color/PillBlue"
@@ -115,7 +117,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headerbg"
-        app:layout_constraintVertical_bias="0.206" />
+        app:layout_constraintVertical_bias="0.388" />
 
     <TextView
         android:id="@+id/appTitle"
@@ -135,21 +137,19 @@
     <Button
         android:id="@+id/btn_login"
         android:layout_width="320dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="60dp"
+        android:layout_height="50dp"
         android:layout_marginBottom="24dp"
         android:background="@drawable/button_square"
         android:fontFamily="@font/bold"
         android:foreground="?android:attr/selectableItemBackground"
-        android:text="ENTRAR"
         android:onClick="OnLogin"
+        android:text="ENTRAR"
         android:textAllCaps="true"
         android:textColor="@color/White"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/login_recuperaSenha"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/login_senha" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ProgressBar
         android:id="@+id/loading"
@@ -171,7 +171,8 @@
         android:id="@+id/login_recuperaSenha"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="320dp"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:background="@null"
         android:fontFamily="@font/regular"
         android:text="Esqueci a minha senha"
@@ -186,6 +187,7 @@
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="45dp"
         android:layout_height="49dp"
+        android:contentDescription="TODO"
         android:onClick="goToMainActivity"
         app:layout_constraintBottom_toTopOf="@+id/appTitle"
         app:layout_constraintEnd_toEndOf="parent"
@@ -193,8 +195,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/backwardarrow"
-        android:contentDescription="TODO" />
+        app:srcCompat="@drawable/backwardarrow" />
 
     <ImageButton
         android:id="@+id/helpbtn"
